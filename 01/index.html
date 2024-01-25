@@ -111,8 +111,8 @@
   const q6 = document.getElementById('q6');
   q6.addEventListener('click', () => {
     function change() {
-      q6.style.marginRight = "150px";
-      q6.style.marginBottom = "150px";
+      q6.style.marginLeft = "150px";
+      q6.style.marginTop = "150px";
     }
     setTimeout(change, 500);
   });
@@ -153,7 +153,9 @@
     const clickedIndex = Array.from(q10.children).indexOf(event.target);
 
     Array.from(q11.children).forEach((child, index) => {
-      console.log(Array.from(q11.children).index);
+      // q11の子要素がどの子要素と紐づいてるかを確認するconsole.logでした。
+      // 正しくはconsole.log(index);
+      console.log(index)
       if (index === clickedIndex) {
         child.classList.add('is-big');
       } else {
